@@ -1,0 +1,49 @@
+concatenated_layer_offset: 0
+data:
+  layers: []
+  min_gpu_mem: null
+  model: microsoft/deberta-v2-xxlarge-mnli
+  num_gpus: -1
+  prompts:
+    balance: false
+    data_dir: null
+    datasets:
+    - imdb
+    label_column: null
+    max_examples:
+    - 750
+    - 250
+    num_shots: 0
+    num_variants: -1
+    seed: 42
+    stream: false
+  token_loc: last
+debug: false
+net:
+  activation: gelu
+  bias: true
+  hidden_size: null
+  init: default
+  loss:
+  - 1.0*ccs
+  loss_dict:
+    ccs: 1.0
+  lr: 0.01
+  num_epochs: 1000
+  num_layers: 1
+  num_tries: 10
+  optimizer: lbfgs
+  pre_ln: false
+  seed: 42
+  supervised_weight: 0.0
+  weight_decay: 0.01
+normalization: meanonly
+num_gpus: -1
+optim:
+  lr: 0.01
+  num_epochs: 1000
+  num_tries: 10
+  optimizer: lbfgs
+  weight_decay: 0.01
+out_dir: null
+skip_baseline: false
