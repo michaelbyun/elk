@@ -91,7 +91,8 @@ class Evaluate(Run):
             lr_model = load_baseline(lr_dir, layer)
             lr_model.eval()
             lr_auroc, lr_acc = evaluate_baseline(
-                lr_model.cuda(), test_x0.cuda(), test_x1.cuda(), test_labels
+                # lr_model.cuda(), test_x0.cuda(), test_x1.cuda(), test_labels
+                lr_model.to('mps'), test_x0.to('mps'), test_x1.to('mps'), test_labels
             )
 
             stats_row["lr_auroc"] = lr_auroc
